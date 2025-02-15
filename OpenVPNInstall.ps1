@@ -9,7 +9,7 @@ if($InstallFile -match "x86"){
     $Destination = "C:\Program Files\OpenVPN\Config"
 }
 foreach($File in $Files){
-    Move-Item $File -Destination $Destination
+    Copy-Item $File -Destination $Destination
 }
 
 <#

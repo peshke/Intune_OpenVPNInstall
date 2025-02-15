@@ -39,6 +39,7 @@ ___
 4. Complete the necessary information and click Next.
 5. Within the *Program* tab complete the following :
     - Install command : `powershell.exe -executionpolicy bypass -file OpenVPNInstall.ps1 ConfigFile1.ovpn`
+    - Install command for multiple files: `powershell.exe -executionpolicy bypass .\OpenVPNInstall.ps1 "ConfigFile1.ovpn,ConfigFile2.ovpn,KeyFile1.key,CrtFile1.crt"`
     - Uninstall command : `msiexec /x "{C57B257B-3D92-4AC0-8FE8-7D6FF81AEF73}" /q`
         - This is the GUID for the *OpenVPN-2.5.7-I602-amd64.msi*. Your GUID may need to be adapted depending on your installer and version. To recover the GUID of installed files you can use the following command : `get-wmiobject Win32_Product | Sort-Object -Property Name |Format-Table IdentifyingNumber, Name, LocalPackage -AutoSize`
 6. Within the *Requirements* tab, complete the "Operating system architecture" and "Minimum operating system."
